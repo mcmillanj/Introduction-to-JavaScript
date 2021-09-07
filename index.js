@@ -127,38 +127,47 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 */  
 
 function hungryDog(weight, age){
+
   if(age >= 1 && weight <= 5)
   {
     return weight *0.05;
   }
+
   else if(age >= 1 && weight >= 6 && weight <= 10)
   {
    return weight *0.04;
   }
+
    else if(age >= 1 && weight >= 11 && weight <= 15)
    {
     return weight * 0.03;
    } 
-   else if(age >= 1 && weight >15)
+
+   else if(age >= 1 && weight > 15)
    {
      return weight * 0.02;
    }
+
+   else if(age < 0.333)
+   {
+     return weight * 0.1;
+   }
+
+   else if(age >= 0.333 && age < 0.583 )
+   {
+   return weight * 0.05;
+   }  
+
     else if(age < 1 && age >= 0.583)
     {
       return weight *0.04;
     }
-    else if(age < 0.583 && age >= 0.333)
-    {
-    return weight * 0.05;
-    }
-    else if(age < 0.333)
-    {
-      return weight *0.1;
-    }
+    
+    
    
    
 }
-let feedAmount = hungryDog(10,6);
+let feedAmount = hungryDog(15,1);
     console.log(feedAmount)
 
 
@@ -182,11 +191,39 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.ceil(Math.random() * 3);
 
 function game(user, computer){
-  /*add your code here*/
-}
 
+  let rock=0;
+  let paper = 1;
+  scissors = 2;
+
+  if (computer === 2 && user === 1)  {
+    return "you win!";
+  } 
+  else if (computer === 3 && user === 2) {
+    return "you win!";
+  }
+   else if (computer === 1 && user === 3) {
+    return "you win!";
+  } 
+  else if (computer === user) {
+    return `it's a tie`
+  } 
+  else if (computer === 1 && user === 2) {
+    return "you lose!";
+   }
+   else if (computer === 2 && user === 3) {
+    return "you lose!";
+   }
+   else if (computer === 3 && user === 1) {
+  return "you lose!";
+ }
+} 
+let answer = game(1,computer );
+ 
+ console.log(answer);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
