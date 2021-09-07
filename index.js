@@ -75,7 +75,7 @@ Do the following:
 */
 
 function multiply(num, num2){
-  return num * num2;/*add your code here*/
+  return num * num2;
 }
 
 console.log(multiply(10,20));
@@ -162,13 +162,10 @@ function hungryDog(weight, age){
     {
       return weight *0.04;
     }
-    
-    
-   
-   
+      
 }
 let feedAmount = hungryDog(15,1);
-    console.log(feedAmount)
+    console.log(feedAmount);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -197,35 +194,31 @@ function game(user, computer){
 
   let rock=0;
   let paper = 1;
-  scissors = 2;
+  let scissors = 2;
 
-  if (computer === 2 && user === 1)  {
+  if (computer === scissors && user === paper)  {
     return "you win!";
   } 
-  else if (computer === 3 && user === 2) {
+  else if (computer === rock && user === scissors) {
     return "you win!";
   }
-   else if (computer === 1 && user === 3) {
+   else if (computer === paper && user === rock) {
     return "you win!";
   } 
   else if (computer === user) {
     return `it's a tie`
   } 
-  else if (computer === 1 && user === 2) {
+  else if (computer === paper && user === scissors) {
     return "you lose!";
    }
-   else if (computer === 2 && user === 3) {
+   else if (computer === scissors && user === rock) {
     return "you lose!";
    }
-   else if (computer === 3 && user === 1) {
+   else if (computer === rock && user === paper) {
   return "you lose!";
  }
 } 
-let answer = game(1,computer );
- 
- console.log(answer);
-
-
+// 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
@@ -237,10 +230,13 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(numOfkilometers){
+  
+   return numOfkilometers  *  0.621371;
+  
 }
-
+let numOfMiles = miles(10);
+ console.log(numOfMiles);
 
 
 //Task 5b - Feet to CM
@@ -251,9 +247,13 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
-}
+function feet(cm){
+  
+    return (cm/30.48)
+  }
+  let amountOfFeet = feet(5);
+  console.log(amountOfFeet); 
+
 
 
 
@@ -268,7 +268,11 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+  {
+    return `${startNumber} bottles of soda on the wall, ${startNumber} bottles of soda, take one down pass it around ${startNumber -1} bottles of soda on the wall`;
+}
+                        
+console.log(annoyingSong(99));  /*add your code here*/
 }
 
 
@@ -287,10 +291,29 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
-
+function grade(score)
+{
+  if(score >= 90)
+  {
+  return "you got an A";
+  }
+  else if(score >= 80 && score <= 89)
+  {
+   return"you got a B";
+  }
+  else if(score >= 70 && score <= 79)
+  {
+   return "you got a C";
+  }
+  else if(score >= 60 && score <= 69)
+  { 
+   return "you got a D";
+  }
+   else (score < 69 )
+  {
+   return "you got an F";
+  }
+ }
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
