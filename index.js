@@ -277,7 +277,7 @@ function annoyingSong(startNumber){
     return `${startNumber} bottles of soda on the wall, ${startNumber} bottles of soda, take one down pass it around ${startNumber -1} bottles of soda on the wall`;
 }
                         
-console.log(annoyingSong(99));  /*add your code here*/
+console.log(annoyingSong(99));  
 }
 
 
