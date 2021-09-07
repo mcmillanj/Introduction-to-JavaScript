@@ -192,29 +192,34 @@ let computer = Math.ceil(Math.random() * 3);
 
 function game(user, computer){
 
-  let rock=0;
-  let paper = 1;
-  let scissors = 2;
+  let rock=1;
+  let paper = 2;
+  let scissors = 3;
+  if(computer <= 1){
+    computer = "rock";
+  }
+  else if(computer <= 2){
+  computer  = 'paper';
+  }
+  else if(computer > 2){
+    computer = 'scissors';
 
-  if (computer === scissors && user === paper)  {
+
+  }
+  if (computer === 'paper' && user === 'scissors')  {
     return "you win!";
   } 
-  else if (computer === rock && user === scissors) {
+  else if (computer === 'rock' && user === 'paper') {
     return "you win!";
   }
-   else if (computer === paper && user === rock) {
+   else if (computer === 'scissors' && user === 'rock') {
     return "you win!";
   } 
   else if (computer === user) {
     return `it's a tie`
   } 
-  else if (computer === paper && user === scissors) {
-    return "you lose!";
-   }
-   else if (computer === scissors && user === rock) {
-    return "you lose!";
-   }
-   else if (computer === rock && user === paper) {
+  
+    else {
   return "you lose!";
  }
 } 
@@ -267,7 +272,7 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
+function annoyingSong(startNumber){
   {
     return `${startNumber} bottles of soda on the wall, ${startNumber} bottles of soda, take one down pass it around ${startNumber -1} bottles of soda on the wall`;
 }
